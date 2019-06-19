@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="$messages.getString("charset")" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="$messages.locale.language" lang="$messages.locale.language">
+<head>
+  <title>$meta.reportTitle - $messages.getString("overview")</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=$messages.getString("charset")" />
+  <meta name="description" content="$messages.getString("description")." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+	*                        {padding: 0; margin: 0;}
+	a                        {color: #006699; text-decoration:none;}
+	a:visited                {color: #003366; text-decoration:none;}
+	body                     {font-family: Arial,Tahoma,"宋体"; line-height: 20px; margin: 8px 5px; font-size:12px;}
+	h1                       {font-family: Arial,Tahoma,"宋体"; font-weight: bold; font-size: 22px; margin:15px 5px;}
+	h2                       {font-family: Arial,Tahoma,"宋体"; font-weight: bold; font-size: 18px; margin-bottom: 0;}
+	p                        {font-size: 15px;}
+	td                       {font-size: 12px;}
+	
+	.header                  {font-size: 14px; font-weight: bold; text-align: left;}
+	.passed                  {background-color: #44aa44;}
+	.skipped                 {background-color: #ffaa00;}
+	.failed                  {background-color: #ff4444;}
+	.failedConfig            {background-color: #800000; color: #ffffff}
+	.skippedConfig           {background-color: #cc6600; color: #ffffff}
+	.totalLabel              {font-weight: bold; background-color: #ffffff;}
+	
+	.suite                   {background-color: #999999; font-weight: bold;}
+	.test                    {background-color: #eeeeee; padding-left:30px;}
+	.test .passed            {background-color: #88ee88;}
+	.test .skipped           {background-color: #ffff77;}
+	.test .failed            {background-color: #ff8888;}
+	.group                   {background-color: #cccccc; color: #000000; font-weight: bold;}
+	.suiteLinks              {float: right; font-weight: normal; vertical-align: middle;}
+	.suiteLinks a            {margin-left: 25px; color:#44aa44; font-size:13px;}
+	.passRate                {font-weight: bold; text-align: right;}
+	.duration                {text-align: right;}
+	.thread                  {white-space: nowrap;}
+	
+	.resultsTable            {border: 0; width: 100%; margin-top: 1.8em; line-height: 1.7em; border-spacing: 0.1em;}
+	.resultsTable .method    {width: 18em;}
+	.resultsTable .duration  {width: 6em;}
+	.resultsTable td         {vertical-align: top; padding: 0 1em;}
+	.resultsTable th         {padding: 0 .5em;}
+	.number                  {text-align: right;}
+	.zero                    {font-weight: normal;}
+	.columnHeadings          {font-size: 13px; background-color:#FFF;}
+	.columnHeadings th       {font-weight: normal;}
+	.bb						 {text-align:right; padding:20px 10px; color: #666666;}
+	.totaltime				 {text-align:right; padding:0 10px;}
+	
+	.configTable             {border: 1px solid #800000; margin-bottom: 1.5em;}
+	.skipTable				 {border: 1px solid #ffff77; margin-bottom: 1.5em;}
+	.passTable				 {border: 1px solid #44aa44; margin-bottom: 1.5em;}
+	.failedTable			 {border: 1px solid #ff4444; margin-bottom: 1.5em;}
+	
+	#sidebarHeader           {padding: 12px 12px; margin: 0 -5px 12px -5px; }
+	#sidebarHeader a         {font-weight:bold;}
+	#suites                  {line-height: 23px; border-spacing: 1px; width: 100%; background-color:#999;}
+	.tests                   {display: table-row-group;}
+	.header.suite            {cursor: pointer; clear: right; height: 24px; margin-top: 1px; background-color: #CF9;}
+	div.test                 {margin-top: 0.1em; clear: right; font-size: 1.3em;}
+	
+	/* The +/- toggle used in the navigation frame. */
+	.toggle                  {font-family: Arial,Tahoma,"宋体"; font-weight: bold; padding-left: 2px; padding-right: 5px; color: #777777;}
+	.successIndicator        {float: right; font-family: Arial,Tahoma,"宋体"; font-weight: bold; padding-right: 2px; color: #44aa44;}
+	.skipIndicator           {float: right; font-family: Arial,Tahoma,"宋体"; font-weight: bold; padding-right: 2px; color: #ffaa00;}
+	.failureIndicator        {float: right; font-family: Arial,Tahoma,"宋体"; font-weight: bold; padding-right: 2px; color: #ff4444;}
+	
+	
+	/* These classes are for information about an individual test result. */
+	.result                  {font-size: 1.1em; vertical-align: middle;}
+	.dependency              {font-family: Arial,Tahoma,"宋体"; font-weight: bold;}
+	.arguments               {font-family: Arial,Tahoma,"宋体"; font-weight: bold;}
+	.testOutput              {font-family: Arial,Tahoma,"宋体"; color: #666666;}
+	.stackTrace              {font-size: 0.9em; line-height: 1.2em; margin-left: 2em; display: none;}
+	.stackTrace .stackTrace  {font-size: inherit;}
+	.threadname			{font-family: Arial,Tahoma,"宋体"; color: #666666;}
+	
+	.description             {border-bottom: 1px dotted #006699;}
+	
+	#meta                    {font-size: 11px; text-align: right; float: right;}
+	#systemInfo              {color: #666666;}
+	
+	/* Reporter log output (individual test ouput is style by "testOutput" above). */
+	#log                     {font-family: Arial,Tahoma,"宋体"; font-size=10px; margin-top: 1.8em;}
+	
+	.overviewTable           {width: 100%; margin-top: 5px; line-height: 20px; background-color: #880;}
+	.overviewTable td        {padding: 3px 15px;}
+	.overviewTable th        {padding: 0 7px;}
+	.overviewTable .duration {width: 80px;}
+	.overviewTable .passRate {width: 80px;}
+	.overviewTable .number   {width: 70px;}
+	.overviewTable tr        {height: 20px;}
+	
+		}
+  </style>
+  #if ($meta.stylesheetPath)
+  <link href="custom.css" rel="stylesheet" type="text/css" />
+  #end
+</head>
+<!-- 模板 -->
+<body>
+<div id="meta">
+  $messages.getString("atTime") $meta.reportTime $messages.getString("onDate") $meta.reportDate
+  <br /><span id="systemInfo">$meta.user&nbsp;/&nbsp;$meta.javaInfo&nbsp;/&nbsp;$meta.platform</span>
+</div>
+
+<h1>$meta.reportTitle</h1>
+<!--
+#if (!$utils.allOutput.empty)
+  <p>
+    <a href="output.html">$messages.getString("logOutput")</a>
+    #if ($meta.coverageLink)
+      &#183; <a href="$meta.coverageLink" target="_top">$messages.getString("coverageReport")</a>
+    #end
+  </p>
+#end
+-->
+#foreach ($suite in $suites)
+<table class="overviewTable" cellpadding="0" cellspacing="1">
+  #set ($suiteId = $velocityCount)
+  #set ($totalTests = 0)
+  #set ($totalPassed = 0)
+  #set ($totalSkipped = 0)
+  #set ($totalFailed = 0)
+  #set ($charts = 0)
+  #set ($chartrow = 0)
+  <tr>
+    <th colspan="7" class="header suite">
+      <div class="suiteLinks">
+        #if (!$suite.invokedMethods.empty)
+        ##<a href="suite${suiteId}_chronology.html">$messages.getString("chronology")</a>
+        #end
+        #if ($utils.hasGroups($suite))
+        <a href="suite${suiteId}_groups.html">$messages.getString("groups")</a>
+        #end
+      </div>
+      ${suite.name}
+    </th>
+  </tr>
+  <tr class="columnHeadings">
+    <td width="40%">&nbsp;</td>
+    <th>$messages.getString("duration")</th>
+    <th>$messages.getString("passed")</th>
+    <th>$messages.getString("skipped")</th>
+    <th>$messages.getString("failed")</th>
+    <th>$messages.getString("passRate")</th>
+    #set ($charts = $suite.results.size()+1)
+    <th>$messages.getString("charts")</th>
+  </tr>
+  #foreach ($result in $suite.results)
+  #set ($notPassedTests = $result.testContext.skippedTests.size() + $result.testContext.failedTests.size())
+  #set ($total = $result.testContext.passedTests.size() + $notPassedTests)
+  #set ($totalTests = $totalTests + $total)
+  #set ($totalPassed = $totalPassed + $result.testContext.passedTests.size())
+  #set ($totalSkipped = $totalSkipped + $result.testContext.skippedTests.size())
+  #set ($totalFailed = $totalFailed + $result.testContext.failedTests.size())
+  #set ($failuresExist = $result.testContext.failedTests.size()>0 || $result.testContext.failedConfigurations.size()>0)
+  #set ($chartrow = $chartrow +1)
+
+  #if (($onlyReportFailures && $failuresExist) || (!$onlyReportFailures))
+  <tr class="test">
+    <td class="test">
+      <a href="suite${suiteId}_test${velocityCount}_results.html">${result.testContext.name}</a>
+    </td>
+    <td class="duration">
+      $utils.formatDuration($utils.getDuration($result.testContext))s
+    </td>
+
+    #if ($result.testContext.passedTests.size() > 0)
+    <td class="passed number">$result.testContext.passedTests.size()</td>
+    #else
+    <td class="zero number">0</td>
+    #end
+
+    #if ($result.testContext.skippedTests.size() > 0)
+    <td class="skipped number">$result.testContext.skippedTests.size()</td>
+    #else
+    <td class="zero number">0</td>
+    #end
+
+    #if ($result.testContext.failedTests.size() > 0)
+    <td class="failed number">$result.testContext.failedTests.size()</td>
+    #else
+    <td class="zero number">0</td>
+    #end
+
+    <td class="passRate">
+      #if ($total > 0)
+      #set ($passRate = (($total - $notPassedTests) * 100 / $total))
+      $passRate%
+      #else
+      $messages.getString("notApplicable")
+      #end
+    </td>
+    
+    #if ($chartrow<2)
+    <td rowspan="$charts" style="background-color:white">
+    <img id="chartimg${suiteId}" style="-webkit-user-select: none" src="">
+    </td>
+    #end
+  </tr>
+  #end
+  #end
+
+    <tr class="suite">
+    <td colspan="2" class="totalLabel">$messages.getString("total")</td>
+
+    #if ($totalPassed > 0)
+    <td class="passed number">$totalPassed</td>
+    #else
+    <td class="zero number">0</td>
+    #end
+
+    #if ($totalSkipped > 0)
+    <td class="skipped number">$totalSkipped</td>
+    #else
+    <td class="zero number">0</td>
+    #end
+
+    #if ($totalFailed > 0)
+    <td class="failed number">$totalFailed</td>
+    #else
+    <td class="zero number">0</td>
+    #end
+
+    <td class="passRate suite">
+      #if ($totalTests > 0)
+      #set ($passRate = (($totalTests - $totalSkipped - $totalFailed) * 100 / $totalTests))
+      $passRate%
+      #else
+      $messages.getString("notApplicable")
+      #end
+    </td>
+    
+    <script language="javascript">
+        document.getElementById("chartimg${suiteId}").src="http://chart.apis.google.com/chart?cht=p&chd=t:$totalPassed,$totalFailed,$totalSkipped&chs=250x100&chl=Passed($totalPassed)|Failed($totalFailed)|Skipped($totalSkipped)";
+    </script>    
+  </tr>
+</table>
+#end
+<p></p>
+<div class="bb"> $messages.getString("generatedBy")</div>
+</body>
+</html>

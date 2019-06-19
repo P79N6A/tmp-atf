@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.bj58.daojia.test:comm-utils:0.0.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bj58/daojia/test/comm-utils/0.0.4-SNAPSHOT/comm-utils-0.0.4-20161009.083111-28.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bj58/daojia/test/comm-utils/0.0.4-SNAPSHOT/comm-utils-0.0.4-20161009.083111-28-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bj58/daojia/test/comm-utils/0.0.4-SNAPSHOT/comm-utils-0.0.4-20161009.083111-28-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

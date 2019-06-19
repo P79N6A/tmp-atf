@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.daojia.spat.dsfmngr:com.daojia.spat.dsfmngr.collector.client:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/daojia/spat/dsfmngr/com.daojia.spat.dsfmngr.collector.client/1.0.0-SNAPSHOT/com.daojia.spat.dsfmngr.collector.client-1.0.0-20160616.054146-4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/daojia/spat/dsfmngr/com.daojia.spat.dsfmngr.collector.client/1.0.0-SNAPSHOT/com.daojia.spat.dsfmngr.collector.client-1.0.0-20160616.054146-4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/daojia/spat/dsfmngr/com.daojia.spat.dsfmngr.collector.client/1.0.0-SNAPSHOT/com.daojia.spat.dsfmngr.collector.client-1.0.0-20160616.054146-4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
